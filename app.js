@@ -1,4 +1,26 @@
-const list=document.getElementById('list');let tasks=[];try{const saved=JSON.parse(localStorage.getItem('practice-tasks')||'[]');if(Array.isArray(saved))tasks=saved.filter(x=>typeof x==='string');}catch{}
-function save(){localStorage.setItem('practice-tasks',JSON.stringify(tasks));}
-function render(){list.replaceChildren();tasks.forEach((text,index)=>{const row=document.createElement('li');row.textContent=text;const button=document.createElement('button');button.textContent='Delete';button.onclick=()=>{/* TODO: remove the indexed task, save and render */};row.append(button);list.append(row);});}
-document.getElementById('form').onsubmit=e=>{e.preventDefault();const input=document.getElementById('text'),text=input.value.trim();/* TODO: reject blank text; push text, save(), render(), clear input. Use textContent, not HTML. */};render();
+function calculate(operator) {
+    let num1 = Number(document.getElementById("num1").value);
+    let num2 = Number(document.getElementById("num2").value);
+    let result;
+
+    if (operator === "+") {
+        result = num1 + num2;
+    }
+    else if (operator === "-") {
+        result = num1 - num2;
+    }
+    else if (operator === "*") {
+        result = num1 * num2;
+    }
+    else if (operator === "/") {
+        if (num2 === 0) {
+            document.getElementById("result").innerText =
+                "Cannot divide by zero!";
+            return;
+        }
+        result = num1 / num2;
+    }
+
+    document.getElementById("result").innerText =
+        "Result: " + result;
+}
