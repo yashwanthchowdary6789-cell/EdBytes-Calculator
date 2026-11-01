@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,23 +5,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="calculator">
         <h1>EdBytes Calculator</h1>
-
         <input type="number" id="num1" placeholder="First Number">
         <input type="number" id="num2" placeholder="Second Number">
 
-        <div class="buttons">
-            <button onclick="calculate('+')">+</button>
-            <button onclick="calculate('-')">−</button>
-            <button onclick="calculate('*')">×</button>
-            <button onclick="calculate('/')">÷</button>
-        </div>
+        <button onclick="calculate('+')">+</button>
+        <button onclick="calculate('-')">-</button>
+        <button onclick="calculate('*')">×</button>
+        <button onclick="calculate('/')">÷</button>
 
         <h2 id="result">Result: 0</h2>
     </div>
-
     <script src="app.js"></script>
 </body>
 </html>
