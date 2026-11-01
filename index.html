@@ -1,1 +1,28 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Student practice</title><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head><body><main><h1>My task list</h1><form id="form"><label>Task <input id="text" maxlength="200"></label><button>Add</button></form><ul id="list"></ul><p id="message" role="status"></p></main></body></html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EdBytes Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <h1>EdBytes Calculator</h1>
+
+        <input type="number" id="num1" placeholder="First Number">
+        <input type="number" id="num2" placeholder="Second Number">
+
+        <div class="buttons">
+            <button onclick="calculate('+')">+</button>
+            <button onclick="calculate('-')">−</button>
+            <button onclick="calculate('*')">×</button>
+            <button onclick="calculate('/')">÷</button>
+        </div>
+
+        <h2 id="result">Result: 0</h2>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
